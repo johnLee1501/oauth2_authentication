@@ -58,6 +58,7 @@ Ingresa a localhost:8000/admin para registrar tu aplicación cliente. No olvides
 Client type: Confidential
 Authorization grant type: Resource owner password-based
 ```
+
 ![image](https://user-images.githubusercontent.com/71096926/119763670-924e7b00-be75-11eb-8e77-b7f8a8cfbde5.png)
 
 Obtén tu token de acceso en el endpoint http://127.0.0.1:8000/o/token/ , puedes utilizar postman para mayor comodidad.
@@ -75,11 +76,12 @@ OAUTH2_PROVIDER = {
 ```
 
 Cuando ya tengas tu token de acceso, puedes acceder en tu navegador a localhost:8000/ y acceder a la interfaz de swagger para registrar tu token y hacer las peticiones que desees. 
+
 ![image](https://user-images.githubusercontent.com/71096926/119764123-78616800-be76-11eb-8448-c8944009ce95.png)
 
 ![image](https://user-images.githubusercontent.com/71096926/119764187-93cc7300-be76-11eb-8903-cd64d60b8f7c.png)
 
-
+El endpoint get groups solo puede ser utilizado si el token tiene el scope "groups"
 
 ## Autor
 
