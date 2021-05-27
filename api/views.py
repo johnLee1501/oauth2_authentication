@@ -18,7 +18,7 @@ class UserDetails(generics.RetrieveAPIView):
 
 
 class GroupList(generics.ListAPIView):
-    permission_classes = [permissions.IsAuthenticated, TokenHasScope]
+    permission_classes = [TokenHasScope]
     required_scopes = ['groups']
     queryset = Group.objects.all()
     serializer_class = GroupSerializer

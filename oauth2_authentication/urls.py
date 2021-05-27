@@ -14,13 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
+from django.views.static import serve
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from rest_framework.routers import SimpleRouter
 
 from api.views import UserList, UserDetails, GroupList
+from oauth2_authentication import settings
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -32,7 +34,6 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
 )
 router = SimpleRouter()
-# router.register(r'cactus', CactusViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -42,3 +43,4 @@ urlpatterns = [
     path('users/<pk>/', UserDetails.as_view()),
     path('groups/', GroupList.as_view()),
 ]
+

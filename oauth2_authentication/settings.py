@@ -27,25 +27,14 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 SWAGGER_SETTINGS = {
-    'USE_SESSION_AUTH': False,
     'SECURITY_DEFINITIONS': {
-        'Your App API - Swagger': {
-            'type': 'oauth2',
-            'authorizationUrl': 'http://127.0.0.1:8000/o/authorize',
-            'tokenUrl': 'http://127.0.0.1:8000/o/token/',
-            'flow': 'accessCode',
-            'scopes': {
-                'read groups': 'read groups',
-            }
+        'DRF Token': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
         }
     },
-    'OAUTH2_REDIRECT_URL': 'http://localhost:8000/static/drf-yasg/swagger-ui-dist/oauth2-redirect.html',
-    'OAUTH2_CONFIG': {
-        'clientId': 'VilzpEJKFN8C0TCfyUHJYOINt0gOy9qSd6aVAOVl',
-        'clientSecret': 'VtgLYYwpDiqXrzH29ZhXsZ36viEX4MxbGyRbwIUDYEnF8nEEwmrPaD8di2VzjcjQ5q82AqqamU1mIHIggAzYcsnyLZG5s5epOrXElTz8JlWRALuIu27HRz7XMj0hTN4f',
-        'appName': 'AplicaciónDjango'
-
-    },
+    'USE_SESSION_AUTH': False
 }
 
 # Application definition
@@ -63,6 +52,7 @@ INSTALLED_APPS = [
 ]
 
 OAUTH2_PROVIDER = {
+    'OAUTH2_BACKEND_CLASS': 'oauth2_provider.oauth2_backends.JSONOAuthLibCore',
     'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Access to your groups'}
 }
 
