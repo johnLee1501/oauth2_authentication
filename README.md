@@ -86,3 +86,6 @@ El endpoint get groups solo puede ser utilizado si el token tiene el scope "grou
 ## Autor
 
 * **John Vega**
+
+Para mayor información puedes leer la documentación de Django OAuth Toolkit
+https://django-oauth-toolkit.readthedocs.io/en/latest/rest-framework/rest-framework.html
