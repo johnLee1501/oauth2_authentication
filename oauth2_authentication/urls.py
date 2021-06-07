@@ -21,7 +21,7 @@ from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from rest_framework.routers import SimpleRouter
 
-from api.views import UserList, UserDetails, GroupList
+from api.views import UserView, GroupList
 from oauth2_authentication import settings
 
 schema_view = get_schema_view(
@@ -34,13 +34,11 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
 )
 router = SimpleRouter()
-
+router.register(r'usuarios', UserView)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', schema_view.with_ui('swagger', cache_timeout=0)),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    path('users/', UserList.as_view()),
-    path('users/<pk>/', UserDetails.as_view()),
+    path('', include(router.urls)),
     path('groups/', GroupList.as_view()),
 ]
-
