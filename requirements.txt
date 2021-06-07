@@ -1,4 +1,6 @@
-Django==3.2.3
-django-oauth-toolkit==1.5.0
-djangorestframework==3.12.4
-drf-yasg==1.20.0
+django-oauth-toolkit
+djangorestframework
+drf-yasg
+django
+gunicorn
+django-heroku
