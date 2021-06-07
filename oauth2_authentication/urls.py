@@ -37,7 +37,7 @@ router = SimpleRouter()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0)),
+    path('', schema_view.with_ui('swagger', cache_timeout=0)),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     path('users/', UserList.as_view()),
     path('users/<pk>/', UserDetails.as_view()),
