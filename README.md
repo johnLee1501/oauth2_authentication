@@ -21,7 +21,7 @@ Recuerda anteponer la palabra "bearer" a tu token:
 
 ## Guía rápida
 
-Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local con fines de desarrollo y prueba.
+Estas instrucciones te proporcionarán una copia del proyecto en funcionamiento en tu máquina local con fines de desarrollo y prueba.
 
 ### Prerrequisito
 
@@ -39,20 +39,20 @@ Primero, clona el proyecto en tu computadora
 git clone https://github.com/johnLee1501/oauth2_authentication.git
 ```
 
-luego, cree un entorno virtual para el proyecto, puede usar virtualenvwrapper-win si su sistema operativo es Windows
+luego, crea un entorno virtual para el proyecto, puede usar virtualenvwrapper-win si tu sistema operativo es Windows
 
 ```
 pip install virtualenvwrapper-win
 mkvirtualenv <nombre_del_entorno>
 ```
 
-después de eso, instale los paquetes en requirements.txt para asegurarse de tener todo lo necesario
+después de eso, instala los paquetes de requirements.txt para asegurarte de tener todo lo necesario
 
 ```
 pip install -r requirements.txt
 ```
 
-finalmente, realice las migraciones correspondientes al modelo
+finalmente, realiza las migraciones correspondientes al modelo
 
 ```
 py manage.py makemigrations
