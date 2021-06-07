@@ -1,7 +1,25 @@
 # Api con autenticación oauth2 integrada en Swagger
 Este proyecto te permite interactuar con algunos endpoints utilizando el estándar de autorización oauth2.
 
-## Getting Started
+## Previsualización
+
+Si quieres echar un vistazo a la api antes de clonar el proyecto, puedes dirigirte a: https://oauth2-authentication-1504.herokuapp.com/.
+Utiliza las siguientes credenciales de prueba para obtener un token de acceso (Puedes utilizar postman):
+
+```
+{
+    "grant_type": "password",
+    "username": "root",
+    "password": "root",
+    "client_id": "MC9vL2hbrrjqeGAzANgSYoLSFjaBrRni8xeHzeOZ",
+    "client_secret": "eswjWtLw8irrDrCHebKKSgiUOSQb851q6dZQ5UqiSUYQPciOQRxjKi5YG652OGa4yDnzS3otGIFHupUZP2Bewm5ALQHF392ph6jl1j9dgB0DlBBUyRCJRQn6aWa5xe9Q"
+}
+```
+Recuerda anteponer la palabra "bearer" a tu token:
+
+![image](https://user-images.githubusercontent.com/71096926/121090434-360d2480-c7ae-11eb-9441-575c6de79611.png)
+
+## Guía rápida
 
 Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local con fines de desarrollo y prueba.
 
